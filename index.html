@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans Symbols", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        body {
+            width: 100vw;
+            background-color: #f1eae1;
+        }
+
+        .welcome {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .welcome_center_container {
+            background-color: #FEFCFB;
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 2rem;
+            border-radius: 1rem;
+            position: relative;
+        }
+
+        .welcome_center_container>img {
+            height: 5rem;
+            position: absolute;
+            top: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+        }
+
+        .welcome_center_container>p {
+            line-height: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .welcome_center_container>button {
+            background-color: #484B45;
+            border: none;
+            border-radius: .5rem;
+            font-size: .8rem;
+            padding: .5rem;
+            color: #fff;
+            margin-bottom: .2rem;
+            min-width: 10rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="welcome">
+        <div class="welcome_center_container">
+            <img src="https://media.licdn.com/dms/image/D4D03AQHw08C3KDzj5A/profile-displayphoto-shrink_800_800/0/1686642513565?e=1726099200&v=beta&t=9b1yG_y2zBP4-jDforleHNmZYbmgNsw9Wu2MiO_5Ihk"
+                alt="My Pick">
+            <p>Welcome! I'm Sahil. Let's turn ideas into code.</p>
+            <button>See my work</button>
+            <button>Know about me</button>
+            <button>let's connect</button>
+        </div>
+    </div>
+</body>
+
+</html>
