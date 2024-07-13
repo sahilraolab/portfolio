@@ -118,7 +118,7 @@
             display: none;
         }
 
-        .active{
+        .slide.active {
             display: block;
         }
 
@@ -128,7 +128,7 @@
             }
         }
 
-        .slide>.buttons {
+        .work_slides_container>.buttons {
             width: 100%;
             display: flex;
             gap: 1rem;
@@ -142,7 +142,7 @@
             gap: .5rem;
         }
 
-        .slide>.buttons>button,
+        .work_slides_container>.buttons>button,
         .navigation>button {
             padding: .1rem 1rem;
             border-radius: 1rem;
@@ -153,6 +153,11 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+        }
+
+        .active_button{
+            background-color: #484B45;
+            color: #fff;
         }
 
         .body {
@@ -206,92 +211,78 @@
         Your browser does not support the video tag.
     </video>
     <!-- welcome -->
-    <div class="welcome hidden">
+    <div class="welcome">
         <div class="welcome_center_container">
             <img src="https://media.licdn.com/dms/image/D4D03AQHw08C3KDzj5A/profile-displayphoto-shrink_800_800/0/1686642513565?e=1726099200&v=beta&t=9b1yG_y2zBP4-jDforleHNmZYbmgNsw9Wu2MiO_5Ihk"
                 alt="My Pick">
             <p>Welcome! I'm Sahil. Let's turn ideas into code.</p>
-            <button>See my work</button>
+            <button onclick="document.querySelector('.work').classList.remove('hidden'); document.querySelector('.welcome').classList.add('hidden');">See my work</button>
             <button>Know about me</button>
             <button>let's connect</button>
         </div>
     </div>
     <!-- work samples -->
-    <div class="work">
-        <div class="slide active">
-            <div class="head">
-                <div class="dot" style="background-color: red;"></div>
-                <div class="dot" style="background-color: yellow;"></div>
-                <div class="dot" style="background-color: yellowgreen;"></div>
+    <div class="work hidden">
+        <div class="work_slides_container">
+            <div class="slide active">
+                <div class="head">
+                    <div class="dot" style="background-color: red;"></div>
+                    <div class="dot" style="background-color: yellow;"></div>
+                    <div class="dot" style="background-color: yellowgreen;"></div>
+                </div>
+                <div class="body">
+                    <img src="./allInOneTool.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
+                    <a href="">medcollection.in</a>
+                </div>
             </div>
-            <div class="body">
-                <img src="./allInOneTool.png" alt="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
-                <a href="">medcollection.in</a>
+            <div class="slide">
+                <div class="head">
+                    <div class="dot" style="background-color: red;"></div>
+                    <div class="dot" style="background-color: yellow;"></div>
+                    <div class="dot" style="background-color: yellowgreen;"></div>
+                </div>
+                <div class="body">
+                    <img src="./digitalAgency.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
+                    <a href="">medcollection.in</a>
+                </div>
             </div>
-            <div class="buttons">
-                <button id="prev">Prev</button>
-                <button id="next">Next</button>
+            <div class="slide">
+                <div class="head">
+                    <div class="dot" style="background-color: red;"></div>
+                    <div class="dot" style="background-color: yellow;"></div>
+                    <div class="dot" style="background-color: yellowgreen;"></div>
+                </div>
+                <div class="body">
+                    <img src="./medcollection.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
+                    <a href="">medcollection.in</a>
+                </div>
             </div>
-        </div>
-        <div class="slide">
-            <div class="head">
-                <div class="dot" style="background-color: red;"></div>
-                <div class="dot" style="background-color: yellow;"></div>
-                <div class="dot" style="background-color: yellowgreen;"></div>
+            <div class="slide">
+                <div class="head">
+                    <div class="dot" style="background-color: red;"></div>
+                    <div class="dot" style="background-color: yellow;"></div>
+                    <div class="dot" style="background-color: yellowgreen;"></div>
+                </div>
+                <div class="body">
+                    <img src="./socialMediaManager.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
+                    <a href="">medcollection.in</a>
+                </div>
             </div>
-            <div class="body">
-                <img src="./digitalAgency.png" alt="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
-                <a href="">medcollection.in</a>
-            </div>
-            <div class="buttons">
-                <button id="prev">Prev</button>
-                <button id="next">Next</button>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="head">
-                <div class="dot" style="background-color: red;"></div>
-                <div class="dot" style="background-color: yellow;"></div>
-                <div class="dot" style="background-color: yellowgreen;"></div>
-            </div>
-            <div class="body">
-                <img src="./medcollection.png" alt="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
-                <a href="">medcollection.in</a>
-            </div>
-            <div class="buttons">
-                <button id="prev">Prev</button>
-                <button id="next">Next</button>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="head">
-                <div class="dot" style="background-color: red;"></div>
-                <div class="dot" style="background-color: yellow;"></div>
-                <div class="dot" style="background-color: yellowgreen;"></div>
-            </div>
-            <div class="body">
-                <img src="./socialMediaManager.png" alt="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
-                <a href="">medcollection.in</a>
-            </div>
-            <div class="buttons">
-                <button id="prev">Prev</button>
-                <button id="next">Next</button>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="head">
-                <div class="dot" style="background-color: red;"></div>
-                <div class="dot" style="background-color: yellow;"></div>
-                <div class="dot" style="background-color: yellowgreen;"></div>
-            </div>
-            <div class="body">
-                <img src="./travelAgency.png" alt="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
-                <a href="">medcollection.in</a>
+            <div class="slide">
+                <div class="head">
+                    <div class="dot" style="background-color: red;"></div>
+                    <div class="dot" style="background-color: yellow;"></div>
+                    <div class="dot" style="background-color: yellowgreen;"></div>
+                </div>
+                <div class="body">
+                    <img src="./travelAgency.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat, illo.</p>
+                    <a href="">medcollection.in</a>
+                </div>
             </div>
             <div class="buttons">
                 <button id="prev">Prev</button>
@@ -300,7 +291,7 @@
         </div>
         <div class="navigation">
             <button>Welcome</button>
-            <button>My Work</button>
+            <button class="active_button">My Work</button>
             <button>About Me</button>
             <button>Contact</button>
         </div>
