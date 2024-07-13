@@ -9,6 +9,10 @@
     outline-color: #00cdac;
 }
 
+*::selection{
+    user-select: none;
+}
+
 .hidden {
     display: none !important;
 }
