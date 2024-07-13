@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,13 @@
             height: auto;
             z-index: -1;
             transform: translate(-50%, -50%);
+        }
+
+        /* Hide video for desktop and tablet users */
+        @media (min-width: 768px) {
+            #background-video {
+                display: none;
+            }
         }
 
         .welcome {
@@ -74,7 +81,7 @@
             margin-top: 1.5rem;
         }
 
-        .welcome_center_container>button {
+        .welcome_center_container>a {
             background-color: #484B45;
             border: none;
             border-radius: .5rem;
@@ -83,23 +90,27 @@
             color: #fff;
             margin-bottom: .2rem;
             min-width: 10rem;
+            text-transform: lowercase;
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
+    <!-- bg video -->
     <video autoplay muted loop id="background-video">
         <source src="bg.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <div class="welcome">
+    <!-- welcome -->
+    <div class="welcome hidden">
         <div class="welcome_center_container">
             <img src="https://media.licdn.com/dms/image/D4D03AQHw08C3KDzj5A/profile-displayphoto-shrink_800_800/0/1686642513565?e=1726099200&v=beta&t=9b1yG_y2zBP4-jDforleHNmZYbmgNsw9Wu2MiO_5Ihk"
                 alt="My Pick">
             <p>Welcome! I'm Sahil. Let's turn ideas into code.</p>
-            <button>See my work</button>
-            <button>Know about me</button>
-            <button>let's connect</button>
+            <a href="/work.html">See my work</a>
+            <a href="">Know about me</a>
+            <a href="">let's connect</a>
         </div>
     </div>
 </body>
